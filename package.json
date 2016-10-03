@@ -1,0 +1,61 @@
+{
+  "name": "chordb",
+  "version": "0.1.0",
+  "description": "Collect the chords you need.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run webpack-prod",
+    "start": "npm run webpack-dev",
+    "lint": "eslint src/** --quiet",
+    "clean": "find dist/* -print0 | xargs -0 rm -rfv",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ajmers/react-chord.git"
+  },
+  "keywords": [
+    "chords",
+    "generator"
+  ],
+  "author": "Anne Maiale",
+  "license": "ISC",
+  "homepage": "https://github.com/ajmers/react-chord#readme",
+  "dependencies": {
+    "babel-core": "^6.4.5",
+    "babel-eslint": "^4.1.5",
+    "babel-loader": "^6.1.0",
+    "babel-polyfill": "^6.2.0",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "body-parser": "^1.14.2",
+    "css-loader": "^0.23.1",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "history": "^1.17.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.6.1",
+    "node-sass": "^3.4.2",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-toolbox": "^0.14.0",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.10",
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^1.7.0",
+    "node-sass": "^3.4.2",
+    "normalize.css": "^3.0.3",
+    "postcss-loader": "^0.8.0",
+    "react-addons-css-transition-group": "^0.14.2",
+    "react-addons-test-utils": "^0.14.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "toolbox-loader": "0.0.3"
+  }
+}
