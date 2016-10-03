@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import Input from 'react-toolbox/lib/input';
 
-import InstString from '../instrument-string/instrument-string';
+import InstString from './instrument-string';
 
-import './chord-chart.scss';
+import './chord.scss';
 
 export default class ChordChart extends Component {
     static propTypes = {

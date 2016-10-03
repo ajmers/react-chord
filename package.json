@@ -1,9 +1,10 @@
 {
-  "name": "chordb",
+  "name": "react-chord",
   "version": "0.1.0",
   "description": "Collect the chords you need.",
-  "main": "index.js",
+  "main": "lib/chord.js",
   "scripts": {
+    "compile": "babel src -d lib",
     "build": "npm run clean && npm run webpack-prod",
     "start": "npm run webpack-dev",
     "lint": "eslint src/** --quiet",
@@ -18,7 +19,7 @@
     "generator"
   ],
   "author": "Anne Maiale",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/ajmers/react-chord#readme",
   "dependencies": {
     "babel-core": "^6.4.5",
