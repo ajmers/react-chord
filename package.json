@@ -9,7 +9,7 @@
     "start": "npm run webpack-dev",
     "lint": "eslint src/** --quiet",
     "clean": "find dist/* -print0 | xargs -0 rm -rfv",
-    "prepublish": "npm run lint && npm run compile"
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
