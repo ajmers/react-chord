@@ -1,4 +1,4 @@
-# chordb
+# react-chord
 
 React component for rendering instrument chords (guitar, mandolin, banjo, etc)
 
