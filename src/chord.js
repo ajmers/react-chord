@@ -5,7 +5,7 @@ import InstString from './instrument-string';
 
 import './chord.scss';
 
-export default class ChordChart extends Component {
+export default class Chord extends Component {
     static propTypes = {
         chord: PropTypes.object,
         numFrets: PropTypes.number,
