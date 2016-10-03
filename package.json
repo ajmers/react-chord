@@ -1,6 +1,6 @@
 {
   "name": "react-chord",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Collect the chords you need.",
   "main": "lib/chord.js",
   "scripts": {
