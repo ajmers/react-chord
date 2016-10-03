@@ -8,7 +8,8 @@
     "build": "npm run clean && npm run webpack-prod",
     "start": "npm run webpack-dev",
     "lint": "eslint src/** --quiet",
-    "clean": "find dist/* -print0 | xargs -0 rm -rfv"
+    "clean": "find dist/* -print0 | xargs -0 rm -rfv",
+    "prepublish": "npm run lint && npm run compile"
   },
   "repository": {
     "type": "git",
