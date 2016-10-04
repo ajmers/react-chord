@@ -9,15 +9,13 @@ export default class Chord extends Component {
     static propTypes = {
         chord: PropTypes.object,
         numFrets: PropTypes.number,
-    };
-
-    static contextTypes = {
         isEditable: PropTypes.bool,
+        onFretClick: PropTypes.func,
         onMinFretChange: PropTypes.func,
     };
 
     renderMinFret = minFret => {
-        const { isEditable, onMinFretChange } = this.context;
+        const { isEditable, onMinFretChange } = this.props;
         let minFretEl;
         if (isEditable && onMinFretChange) {
             minFretEl = (<Input
@@ -37,7 +35,7 @@ export default class Chord extends Component {
     };
 
     render() {
-        const { chord, numFrets } = this.props;
+        const { chord, numFrets, isEditable, onFretClick } = this.props;
         const { minFret } = chord;
         return (
             <div className='chord-chart'>
@@ -45,6 +43,8 @@ export default class Chord extends Component {
                 <div className='chord-chart__strings' style={{ display: 'flex' }}>
                     {chord.fingerings.map((string, i) => {
                         return (<InstString key={i}
+                            isEditable={isEditable}
+                            onFretClick={onFretClick}
                             stringIndex={i}
                             string={string}
                             numFrets={numFrets}
