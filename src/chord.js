@@ -21,7 +21,6 @@ export default class Chord extends Component {
         let minFretEl;
         if (isEditable && onMinFretChange) {
             minFretEl = (<Input
-                style={chordMinFretInputStyle}
                 className='chord__min-fret-input'
                 value={minFret || ''}
                 onChange={onMinFretChange}
@@ -29,7 +28,6 @@ export default class Chord extends Component {
         } else {
             minFretEl = (
                 <span
-                    style={chordMinFretStyle}
                     className='chord__min-fret'>
                     {minFret ? minFret + 'fr' : ''}
                 </span>
@@ -42,10 +40,9 @@ export default class Chord extends Component {
         const { chord, numFrets } = this.props;
         const { minFret } = chord;
         return (
-            <div className='chord-chart'
-                style={chordChartStyle}>
+            <div className='chord-chart'>
                 {this.renderMinFret(minFret)}
-                <div className='chord-chart__strings'>
+                <div className='chord-chart__strings' style={{ display: 'flex' }}>
                     {chord.fingerings.map((string, i) => {
                         return (<InstString key={i}
                             stringIndex={i}
@@ -59,28 +56,3 @@ export default class Chord extends Component {
         );
     }
 }
-
-const chordMinFretStyle = {
-    fontSize: '.75em',
-    position: 'absolute',
-    left: 20,
-};
-
-const chordMinFretInputStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
-    position: 'absolute',
-    fontSize: '.75rem',
-    left: 20,
-    top: 30,
-    width: 20,
-    padding: 0,
-};
-
-const chordChartStyle = {
-    display: 'flex',
-    position: 'relative',
-    alignSelf: 'center',
-    padding: 30,
-};

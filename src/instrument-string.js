@@ -44,7 +44,7 @@ export default class InstrumentString extends Component {
         const stringMarkerClickHandler = isEditable ?
             onStringMarkerClick.bind(this, stringIndex, !isPlayed) : null;
 
-        const isFretted = parseInt(fret) !== 0;
+        const isFretted = parseInt(fret, 10) !== 0;
 
         const frettedClass = isFretted ? '' : 'no-fret';
         const playedClass = isPlayed ? '' : 'unplayed';
