@@ -1,7 +1,7 @@
 {
   "name": "react-chord",
-  "version": "0.1.5",
-  "description": "Collect the chords you need.",
+  "version": "0.1.6",
+  "description": "React component for displaying instrument chords (guitar, mandolin, banjo...)",
   "main": "lib/chord.js",
   "scripts": {
     "start": "webpack-dev-server --progress --inline --hot --content-base example/ --port 1341",
