@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import Input from 'react-toolbox/lib/input';
 
 import InstString from './instrument-string';
 
@@ -14,15 +13,20 @@ export default class Chord extends Component {
         onMinFretChange: PropTypes.func,
     };
 
+    static defaultProps = {
+        numFrets: 4,
+        isEditable: false,
+    };
+
     renderMinFret = minFret => {
         const { isEditable, onMinFretChange } = this.props;
         let minFretEl;
         if (isEditable && onMinFretChange) {
-            minFretEl = (<Input
+            minFretEl = (<input
                 className='chord__min-fret-input'
                 value={minFret || ''}
                 onChange={onMinFretChange}
-                >fr</Input>);
+                >fr</input>);
         } else {
             minFretEl = (
                 <span

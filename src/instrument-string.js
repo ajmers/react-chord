@@ -52,6 +52,7 @@ export default class InstrumentString extends Component {
                         <Fret
                             isFretted={fretted}
                             index={index}
+                            key={index}
                             finger={finger}
                             stringIndex={stringIndex}
                             isEditable={isEditable}
